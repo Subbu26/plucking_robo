@@ -161,42 +161,42 @@
            axis_xyz="0 0 1"
            origin_rpy="-1.57 0 0" origin_xyz="0 -0.5 3.5"
            parent="${link_00_name}" child="${link_11_name}"
-           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+           limit_e="1000" limit_l="-3.14" limit_u="3.14" limit_v="2.5" />
            
   
   <m_link_cylinder name="${link_11_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 -0.2"
-              mass="5"
-              ixx="1.3235" ixy="0" ixz="0"
-              iyy="1.3235" iyz="0"
-              izz="0.9655"
+              mass="5.0"
+              ixx="1.32" ixy="0" ixz="0"
+              iyy="1.32" iyz="0"
+              izz="0.96"
               length="0.4" radius="0.2" />
 
 <m_joint name="${link_11_name}__${link_12_name}" type="revolute"
            axis_xyz="0 1 0"
            origin_rpy="0 0 0" origin_xyz="0 0 -0.4"
            parent="${link_11_name}" child="${link_12_name}"
-           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="0.5" />
+           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="2.5" />
            
   <m_link_cylinder name="${link_12_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 -0.4"
               mass="2"
-              ixx="1.0" ixy="0" ixz="0"
-              iyy="1.0" iyz="0"
-              izz="0.0651"
+              ixx="1.5" ixy="0" ixz="0"
+              iyy="1.5" iyz="0"
+              izz="0.651"
               radius="0.15" length="0.8" /> 
 
 <m_joint name="${link_12_name}__${link_13_name}" type="revolute"
            axis_xyz="0 1 0"
            origin_rpy="0 0 0" origin_xyz="0 0 -0.8"
            parent="${link_12_name}" child="${link_13_name}"
-           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="0.5" />
+           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="2.5" />
            
   <m_link_cylinder name="${link_13_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 -0.4"
               mass="1.0"
-              ixx="0.30" ixy="0" ixz="0"
-              iyy="0.30" iyz="0"
+              ixx="1.0" ixy="0" ixz="0"
+              iyy="1.0" iyz="0"
               izz="0.0651"
               radius="0.12" length="0.8" />
               
@@ -204,34 +204,34 @@
            axis_xyz="0 1 0"
            origin_rpy="0 0 0" origin_xyz="0 0 -0.8"
            parent="${link_13_name}" child="${link_14_name}"
-           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="0.5" />
+           limit_e="5000" limit_l="-1.57" limit_u="0" limit_v="2.5" />
            
   <m_link_cylinder name="${link_14_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 -0.4"
               mass="0.5"
-              ixx="0.1" ixy="0" ixz="0"
-              iyy="0.1" iyz="0"
-              izz="0.03"
+              ixx="0.63" ixy="0" ixz="0"
+              iyy="0.63" iyz="0"
+              izz="0.0651"
               radius="0.08" length="0.8" />
               
   <m_joint name="${link_14_name}__${link_15_name}" type="revolute"
            axis_xyz="0 0 1"
            origin_rpy="0 0 0" origin_xyz="0 0 -0.8"
            parent="${link_14_name}" child="${link_15_name}"
-           limit_e="5000" limit_l="-3.14" limit_u="3.14" limit_v="0.5" />
+           limit_e="5000" limit_l="-3.14" limit_u="3.14" limit_v="2.5" />
            
   <m_link_cylinder name="${link_15_name}"
               origin_rpy="0 0 0" origin_xyz="0 0 -0.125"
               mass="0.5"
-              ixx="0.01" ixy="0" ixz="0"
-              iyy="0.01" iyz="0"
-              izz="0.00564"
+              ixx="0.25" ixy="0" ixz="0"
+              iyy="0.25" iyz="0"
+              izz="0.0564"
               radius="0.05" length="0.25" />
 
     <!-- adding right gripper here save -->
   <joint name="top_right_gripper_joint" type="revolute">
     <axis xyz="0 0 1" />
-    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5" />
+    <limit effort="1000.0" lower="0.0" upper="0.548" velocity="2.5" />
     <origin rpy="0 0 0" xyz="0.0 0.0 -0.25" />
     <parent link="${link_15_name}" />
     <child link="top_right_gripper" />
