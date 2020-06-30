@@ -1,0 +1,23 @@
+controller_list:
+  - name: fake_left_hand_controller
+    joints:
+      - base_link__link_01
+      - link_01__link_02
+      - link_02__link_03
+      - link_03__link_04
+  - name: fake_right_hand_controller
+    joints:
+      - base_link__link_11
+      - link_11__link_12
+      - link_12__link_13
+      - link_13__link_14
+  - name: fake_left_gp_controller
+    joints:
+      - link_04__link_05
+      - down_left_gripper_joint
+      - top_left_gripper_joint
+  - name: fake_right_gp_controller
+    joints:
+      - link_14__link_15
+      - down_right_gripper_joint
+      - top_right_gripper_joint

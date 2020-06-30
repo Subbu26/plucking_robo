@@ -1,0 +1,125 @@
+# Simulation settings for using moveit_sim_controllers
+moveit_sim_hw_interface:
+  joint_model_group: left_hand
+  joint_model_group_pose: todo_no_pose_selected
+# Settings for ros_control_boilerplate control loop
+generic_hw_control_loop:
+  loop_hz: 300
+  cycle_time_error_threshold: 0.01
+# Settings for ros_control hardware interface
+hardware_interface:
+  joints:
+    - base_link__link_01
+    - link_01__link_02
+    - link_02__link_03
+    - link_03__link_04
+    - link_04__link_05
+    - down_left_gripper_joint
+    - top_left_gripper_joint
+    - base_link__link_11
+    - link_11__link_12
+    - link_12__link_13
+    - link_13__link_14
+    - link_14__link_15
+    - down_right_gripper_joint
+    - top_right_gripper_joint
+    - left_back_wheel_joint
+    - left_front_wheel_joint
+    - right_back_wheel_joint
+    - right_front_wheel_joint
+  sim_control_mode: 1  # 0: position, 1: velocity
+# Publish all joint states
+# Creates the /joint_states topic necessary in ROS
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+controller_list:
+  []
+my_c:
+  type: position_controllers/JointPositionController
+  joints:
+    - base_link__link_01
+    - link_01__link_02
+    - link_02__link_03
+    - link_03__link_04
+    - base_link__link_11
+    - link_11__link_12
+    - link_12__link_13
+    - link_13__link_14
+    - link_04__link_05
+    - down_left_gripper_joint
+    - top_left_gripper_joint
+    - link_14__link_15
+    - down_right_gripper_joint
+    - top_right_gripper_joint
+  gains:
+    base_link__link_01:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_01__link_02:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_02__link_03:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_03__link_04:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    base_link__link_11:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_11__link_12:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_12__link_13:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_13__link_14:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_04__link_05:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    down_left_gripper_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    top_left_gripper_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    link_14__link_15:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    down_right_gripper_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    top_right_gripper_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: Farming_robot
+    relative_path: urdf/mrm.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/mrm.srdf
+  CONFIG:
+    author_name: cooper
+    author_email: coopoe@india.in
+    generated_timestamp: 1593438852
